@@ -44,13 +44,15 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     webPreferences: {
       // The `plugins` have to be enabled.
-      plugins: true
+      plugins: true,
+      nodeIntegration: false
     }
   });
 
   // and load the index.html of the app.
   //mainWindow.loadURL('file://' + __dirname + '/index.html');
-  mainWindow.loadURL("http://www.dash-player.com/demo/drm-test-area/")
+  //mainWindow.loadURL("http://www.dash-player.com/demo/drm-test-area/")
+  mainWindow.loadURL("http://www.netflix.com")
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
