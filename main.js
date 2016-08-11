@@ -14,16 +14,13 @@ let mainWindow;
 
 //let widevine_adapter_path= app.getPath('appData').concat('/electron-quick-start/widevine/1.4.8.866/_platform_specific/mac_x64/widevinecdmadapter.plugin');
 
-let widevineVersion = '1.4.8.866';
+let widevineVersion = '1.4.8.903';
 let baseWidevinePath ='./widevine/'+widevineVersion+'/_platform_specific/';
 var widevine_adapter_path ='';
 
 switch(process.platform)
 {
-      case "win32":
-        widevine_adapter_path = baseWidevinePath+'win_x86/widevinecdmadapter.dll';
-      break
-      case "win64":
+      case "win32":        
         widevine_adapter_path = baseWidevinePath+'win_x64/widevinecdmadapter.dll';
       break
       default:
@@ -51,8 +48,8 @@ function createWindow () {
 
   // and load the index.html of the app.
   //mainWindow.loadURL('file://' + __dirname + '/index.html');
-  //mainWindow.loadURL("http://www.dash-player.com/demo/drm-test-area/")
-  mainWindow.loadURL("http://www.netflix.com")
+  mainWindow.loadURL("http://www.dash-player.com/demo/drm-test-area/")
+  //mainWindow.loadURL("http://www.netflix.com")
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
